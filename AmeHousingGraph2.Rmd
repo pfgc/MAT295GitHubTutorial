@@ -52,7 +52,7 @@ ggplot(data = AmesHousingNormal5, aes(x = TotalSqFt, y = SalePrice/1000)) + geom
 
 
 **Remarks:**
-Provide a short description of your work here.
+Provide a short description of your work here. h 
 
 
 
