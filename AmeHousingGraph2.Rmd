@@ -52,7 +52,7 @@ ggplot(data = AmesHousingNormal5, aes(x = TotalSqFt, y = SalePrice/1000)) + geom
 
 
 **Remarks:**
-Graphing housing prices by fireplace (yes or no) and total square feet 
+Graphing housing prices by fireplace (yes or no) and total square feet. 
 
 
 
