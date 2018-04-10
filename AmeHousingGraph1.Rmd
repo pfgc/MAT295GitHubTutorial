@@ -27,19 +27,15 @@ AmesHousing <- read.csv("data/AmesHousing.csv")
 
 
 Here is my favorite graph of the Ame Housing data.
-
 ```{r}
-ggplot(data=AmesHousing) +                         
-      geom_histogram(mapping = aes(SalePrice/100000), 
-          breaks=seq(0, 7, by = 1), col="red", fill="lightblue") + 
-      geom_density(mapping = aes(x=SalePrice/100000, y = (..count..)))  +   
-      labs(title="Housing Prices in Ames, Iowa (in $100,000)", 
-          x="Sale Price of Individual Homes")   
+ggplot(data = AmesHousing, aes(x = Year.Remod.Add, y = SalePrice)) + geom_point()  + aes(colour = Fireplaces) + labs(title = "Housing Prices in Ames, Iowa by Remodel Year", x = "Year Remodeled", y = "Sale Price")
 ```
 
-**Remarks:**
-Provide a short description of your work here.
 
+
+**Remarks:**
+
+This graph shows a graph of house prices in Ames, Iowa and how the remodel date affects that price. We have colored by number of Fireplaces, and we tend to see that houses with more fireplaces tend to be more expensive.
 
 
 
