@@ -37,8 +37,22 @@ ggplot(data=AmesHousing) +
           x="Sale Price of Individual Homes")   
 ```
 
+``` {r}
+AmesHousingNormal = filter(AmesHousing, Condition.1 == "Norm")
+
+AmesHousingNormal3 = mutate(AmesHousingNormal, TotalSqFt = AmesHousingNormal$Gr.Liv.Area  +  AmesHousingNormal$Total.Bsmt.SF)
+
+AmesHousingNormal4 <- filter(AmesHousingNormal3, TotalSqFt < 3000)
+
+AmesHousingNormal5 <-mutate(AmesHousingNormal4, FireplaceYN = ifelse (Fireplaces==0, "No", "Yes"))
+
+ggplot(data = AmesHousingNormal5, aes(x = TotalSqFt, y = SalePrice/1000)) + geom_point()  + aes(colour = FireplaceYN)  + stat_smooth(method = lm) + labs(title = "Affect of Total Square Feet and Fireplaces on Housing Prices in Ames, Iowa", x = "Total Square Feet", y = "Sale Price (in Thousands)")
+
+```
+
+
 **Remarks:**
-Provide a short description of your work here.
+Graphing housing prices by fireplace (yes or no) and total square feet. 
 
 
 
