@@ -26,7 +26,7 @@ AmesHousing <- read.csv("data/AmesHousing.csv")
 ```
 
 
-Here is my favorite graph of the Ame Housing data.
+Here is my favorite graph of the Ames Housing data.
 
 ```{r}
 ggplot(data=AmesHousing) +                         
@@ -40,7 +40,7 @@ ggplot(data=AmesHousing) +
 **Remarks:**
 Provide a short description of your work here.
 
-
+Histogram of Sales Price of Individual Homes (in the 100,000s) in Ames, IA. The distribution is right skewed and the majority of homes are priced between 100,000 and 200,000.
 
 
 
