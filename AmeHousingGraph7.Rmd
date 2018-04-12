@@ -31,14 +31,14 @@ Here is my favorite graph of the Ame Housing data.
 ```{r}
 ggplot(data=AmesHousing) +                         
       geom_histogram(mapping = aes(SalePrice/100000), 
-          breaks=seq(0, 7, by = 1), col="red", fill="lightblue") + 
+          breaks=seq(0, 7, by = 1), col="purple", fill="red") + 
       geom_density(mapping = aes(x=SalePrice/100000, y = (..count..)))  +   
       labs(title="Housing Prices in Ames, Iowa (in $100,000)", 
           x="Sale Price of Individual Homes")   
 ```
 
 **Remarks:**
-Provide a short description of your work here.
+I've changed the color of the bars from blue to red and the border from red to purple.
 
 
 
